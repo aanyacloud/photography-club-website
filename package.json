@@ -1,0 +1,27 @@
+{
+  "name": "photography-club",
+  "version": "1.0.0",
+  "description": "Photography Club Website - IIIT Naya Raipur",
+  "main": "frontend/index.html",
+  "scripts": {
+    "dev": "cd frontend && python3 -m http.server 8000",
+    "start": "cd frontend && python3 -m http.server 8000"
+  },
+  "keywords": [
+    "photography",
+    "club",
+    "iiit",
+    "firebase",
+    "netlify"
+  ],
+  "author": "Photography Club Team - IIIT Naya Raipur",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR-USERNAME/photography-club.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR-USERNAME/photography-club/issues"
+  },
+  "homepage": "https://your-photography-club.netlify.app"
+}

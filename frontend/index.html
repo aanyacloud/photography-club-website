@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Club - IIIT Naya Raipur</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="chatbot/chatbot.css">
+
+    <meta name="description" content="IIIT Naya Raipur Photography Club - Capturing moments, creating memories">
+</head>
+
+<body>
+
+    <!-- =============================
+        P-Club Assistant Chatbot UI
+    ============================== -->
+    <div id="chatbot-toggle" class="chat-button">💬</div>
+
+    <div id="chatbot-panel" class="chat-panel">
+        <div class="chat-header">
+            <strong>P-Club Assistant</strong>
+            <button id="chatbot-close" class="chat-close-btn">✕</button>
+        </div>
+
+        <div class="welcome-box">
+            <p>Hi! I’m here to help you with P-Club activities.</p>
+
+            <!-- Correct Quick Access Buttons -->
+            <div class="quick-links">
+                <button class="quick-link" data-cat="aarambh">📸 Aarambh</button>
+                <button class="quick-link" data-cat="garba">💃 Garba</button>
+                <button class="quick-link" data-cat="ganesh">🕉 Ganesh</button>
+                <button class="quick-link" data-cat="orientation">🎒 Orientation</button>
+
+                <button class="quick-link" data-section="#workshops">🎓 Workshops</button>
+                <button class="quick-link" data-section="#application">🤝 Join P-Club</button>
+            </div>
+        </div>
+
+        <div id="chatbot-messages" class="chat-body"></div>
+
+        <div class="chat-input">
+            <input id="chatbot-input" type="text" placeholder="Ask me about P-Club..." />
+            <button id="chatbot-send" class="chat-send-btn">➤</button>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="https://www.iiitnr.ac.in/sites/all/themes/iiit/120res.png" alt="IIIT Logo" class="logo-image">
+                    <h1>IIIT NR Events and Moments</h1>
+                </div>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                    <a href="#workshops" class="nav-link">Workshops</a>
+                </div>
+
+                <div class="nav-actions" id="navActions"></div>
+
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="section hero-section with-bg">
+            <div class="hero-content">
+                <h1 class="hero-title">Capturing Moments</h1>
+                <p class="hero-subtitle">Creating Memories</p>
+                <p class="hero-description">Join IIIT Naya Raipur's Photography Club where creativity meets passion</p>
+
+                <div class="hero-buttons">
+                    <a href="#gallery" class="btn btn-primary">View Gallery</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2 class="section-title">About Our Club</h2>
+                <p>We are a passionate community of photographers capturing IIIT NR’s best moments.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>15+</h3><p>Active Members</p></div>
+                    <div class="stat-card"><h3>12+</h3><p>Events Organized</p></div>
+                    <div class="stat-card"><h3>240+</h3><p>Photos Captured</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="section gallery-section">
+            <div class="container">
+                <h2 class="section-title">Our Gallery</h2>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="aarambh">AARAMBH 8.0</button>
+                    <button class="filter-btn" data-filter="garba">GARBA NIGHT</button>
+                    <button class="filter-btn" data-filter="ganesh">GANESH UTSAV</button>
+                    <button class="filter-btn" data-filter="orientation">ORIENTATION</button>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid"></div>
+            </div>
+        </section>
+
+        <!-- Workshops -->
+        <section id="workshops" class="section workshops-section">
+            <div class="container">
+                <h2 class="section-title">Upcoming Workshops</h2>
+                <div class="workshops-grid" id="workshopsGrid"></div>
+            </div>
+        </section>
+
+        <!-- Application -->
+        <section id="application" class="section application-section">
+            <div class="container">
+                <h2 class="section-title">Join Us</h2>
+
+                <form id="applicationForm" class="application-form">
+                    <div class="form-group">
+                        <label for="appName">Full Name *</label>
+                        <input type="text" id="appName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appEmail">Email *</label>
+                        <input type="email" id="appEmail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appPhone">Phone Number</label>
+                        <input type="tel" id="appPhone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appExperience">Photography Experience *</label>
+                        <textarea id="appExperience" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appEquipment">Equipment You Own</label>
+                        <input type="text" id="appEquipment">
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Submit Application</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-section">
+                    <h3>Photography Club</h3>
+                    <p>IIIT Naya Raipur</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#workshops">Workshops</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 photoclub@iiitnr.edu.in</p>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Feedback</h3>
+                    <form id="feedbackForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Feedback" rows="3" required></textarea>
+                        <button class="btn btn-small">Send</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Photography Club - IIIT Naya Raipur</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Load Main JS -->
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
