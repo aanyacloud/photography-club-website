@@ -15,7 +15,7 @@ import {
     getAllFeedback
 } from './database.js';
 
-const GEMINI_API_KEY = "AIzaSyC0by__t2vCV3847DsWZuSRkxO2AiGJbK8";  // <--- paste your real key here
+const GEMINI_API_KEY = "";  // <--- paste your real key here
 
 async function askPClubAssistant(message) {
 
@@ -170,13 +170,7 @@ const sampleGalleryData = [
         category: 'aarambh',
         caption: 'AARAMBH 8.0'
     },
-    {
-        id: 1,
-        url: 'assets/images/garba/dummy1.jpg',
-        photographer: 'Onkar',
-        category: 'garba',
-        caption: 'GARBA NIGHT'
-    },
+    
     {
         id: 2,
         url: 'assets/images/garba/dummy2.jpg',
@@ -198,20 +192,7 @@ const sampleGalleryData = [
         category: 'garba',
         caption: 'GARBA NIGHT'
     },
-    {
-        id: 5,
-        url: 'assets/images/garba/dummy5.jpg',
-        photographer: 'Onkar',
-        category: 'garba',
-        caption: 'GARBA NIGHT'
-    },
-    {
-        id: 6,
-        url: 'assets/images/garba/dummy6.jpg',
-        photographer: 'Onkar',
-        category: 'garba',
-        caption: 'GARBA NIGHT'
-    },
+    
     {
         id: 1,
         url: 'assets/images/ganesh/dummy1.jpeg',

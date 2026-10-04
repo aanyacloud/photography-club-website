@@ -4,43 +4,48 @@
    ============================================ */
 
 :root {
-    /* Color Palette */
-    --sage-green: #CDD4B1;
-    --peach-light: #FEECD0;
-    --cream: #FFF9E2;
-    --pale-yellow: #EBECCC;
-    --terracotta: #DCA278;
-    
+
+    /* New Photography / Editorial Palette */
+    :root {
+    --sage-green: #C8B6A6;
+    --peach-light: #E8D5C4;
+    --cream: #FAF6F0;
+    --pale-yellow: #EFE5D8;
+    --terracotta: #8B5E3C;
+}
+
     /* Semantic Colors */
-    --primary: #DCA278;
-    --secondary: #CDD4B1;
-    --accent: #FEECD0;
-    --background: #FFF9E2;
-    --surface: #EBECCC;
-    --text-dark: #4a4a4a;
-    --text-light: #6a6a6a;
-    
-    /* Spacing */
+    --primary: #8B7355;
+    --secondary: #D8D2C4;
+    --accent: #E8E1D5;
+    --background: #F7F5F0;
+    --surface: #EDE9E1;
+
+    --text-dark: #242424;
+    --text-light: #6B6862;
+
+    /* Keep everything else exactly the same */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
-    
-    /* Typography */
+
     --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     --font-size-xs: 0.875rem;
     --font-size-sm: 1rem;
     --font-size-md: 1.125rem;
     --font-size-lg: 1.5rem;
     --font-size-xl: 2rem;
     --font-size-xxl: 3rem;
-    
-    /* Effects */
+
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-sm: 0 2px 8px rgba(74, 74, 74, 0.1);
-    --shadow-md: 0 4px 16px rgba(74, 74, 74, 0.15);
-    --shadow-lg: 0 8px 32px rgba(74, 74, 74, 0.2);
+
+    --shadow-sm: 0 2px 8px rgba(36, 36, 36, 0.08);
+    --shadow-md: 0 4px 16px rgba(36, 36, 36, 0.12);
+    --shadow-lg: 0 8px 32px rgba(36, 36, 36, 0.16);
+
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
@@ -1310,4 +1315,62 @@ main {
   background: #e63946;
   color: white;
   cursor: pointer;
+}
+
+/* ============================================
+   P-CLUB — PERSONAL DESIGN OVERRIDE
+   ============================================ */
+
+:root {
+    --primary: #1c1c1c;
+    --secondary: #d8d2c4;
+    --accent: #eee9df;
+    --background: #f7f5f0;
+    --surface: #ebe7de;
+
+    --text-dark: #1c1c1c;
+    --text-light: #6b6964;
+
+    --font-primary: "Inter", "Segoe UI", sans-serif;
+
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px;
+
+    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Base */
+body {
+    background: var(--background);
+    color: var(--text-dark);
+    font-family: var(--font-primary);
+}
+
+/* Smooth selection */
+::selection {
+    background: #1c1c1c;
+    color: #fff;
+}
+
+/* Sections */
+.section {
+    padding: 7rem 2rem;
+}
+
+.section-title {
+    color: var(--text-dark);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    margin-bottom: 4rem;
+}
+
+.section-title::after {
+    width: 45px;
+    height: 2px;
+    background: #1c1c1c;
+    margin-top: 1.2rem;
 }
